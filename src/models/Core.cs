@@ -60,7 +60,7 @@ public class Core : Base
         }
 
         if(await InstallGithubAsset(preservePlatformsFolder)) {
-            await this.ReplaceCheck();
+            this.ReplaceCheck();
             return true;
         } else {
             return false;
@@ -651,7 +651,7 @@ public class Core : Base
         return check;
     }
 
-    public async Task ReplaceCheck()
+    public void ReplaceCheck()
     {
         var replaces = this.GetSubstitutes();
 
@@ -723,10 +723,10 @@ public class Core : Base
         return config;
     }
 
-    public async Task AddDisplayModes()
+    public void AddDisplayModes()
     {
         var info = this.GetConfig();
-        var video = await GetVideoConfig();
+        var video = GetVideoConfig();
         List<DisplayMode> all = new List<DisplayMode>();
 
         foreach (string id in ALL_MODES)
