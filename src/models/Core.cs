@@ -705,7 +705,7 @@ public class Core : Base
         }
     }
 
-    public async Task<Video> GetVideoConfig()
+    public Video GetVideoConfig()
     {
         CheckUpdateDirectory();
 
