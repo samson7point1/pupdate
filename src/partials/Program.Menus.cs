@@ -111,7 +111,7 @@ internal partial class Program
                 await coreUpdater.UpdateFirmware();
                 Pause();
             })
-            .Add("Select Cores            >", () => // \u00BB
+            .Add("Select Cores >", () => // \u00BB
             {
                 AskAboutNewCores(true);
                 RunCoreSelector(GlobalHelper.Cores);
@@ -130,9 +130,9 @@ internal partial class Program
                 AssetsService.BackupMemories(path, GlobalHelper.SettingsManager.GetConfig().backup_saves_location);
                 Pause();
             })
-            .Add("Pocket Setup            >", pocketSetupMenu.Show)
-            .Add("Pocket Maintenance      >", pocketMaintenanceMenu.Show)
-            .Add("Settings                >", () =>
+            .Add("Pocket Setup >", pocketSetupMenu.Show)
+            .Add("Pocket Maintenance >", pocketMaintenanceMenu.Show)
+            .Add("Settings >", () =>
             {
                 SettingsMenu();
 

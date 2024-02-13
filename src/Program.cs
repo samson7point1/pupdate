@@ -31,6 +31,8 @@ internal partial class Program
             string backupSaves_Path = null;
             bool backupSaves_SaveConfig = false;
 
+            var boop = await ExtrasService.GetExtrRepos();
+
             string verb = "menu";
             Dictionary<string, object> data = new Dictionary<string, object>();
 
